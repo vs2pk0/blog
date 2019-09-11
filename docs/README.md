@@ -1,14 +1,17 @@
 ---
 home: true
 heroImage: /app.png
+heroText: 小米不是米的文档
+tagline: 文档, 博客
 actionText: 进入文档 →
 actionLink: /guide/
-features:
-  - title: Simplicity First
-    details: Minimal setup with markdown-centered project structure helps you focus on writing.
-  - title: Vue-Powered
-    details: Enjoy the dev experience of Vue + webpack, use Vue components in markdown, and develop custom themes with Vue.
-  - title: Performant
-    details: VuePress generates pre-rendered static HTML for each page, and runs as an SPA once a page is loaded.
-footer: MIT Licensed | Copyright © 2018-present Evan You
+footer: MIT Licensed | Copyright © 2019 小米不是米的文档
 ---
+
+## 关于~~文档~~笔记
+
+::: danger
+
+这根本不是什么文档，仅仅是一个个人笔记而已。
+
+:::
