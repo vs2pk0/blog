@@ -4,7 +4,7 @@ module.exports = {
     locales: localesConf,
     markdown: mdConf,
     themeConfig: themeConf,
-    base: '/vuepress/',
+    base: '/blog/',
     // base: '/',
     dest: 'vuepress',
     serviceWorker: true,
