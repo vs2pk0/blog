@@ -8,6 +8,16 @@ const web = [
         title: 'JavaScript',
         collapsable: false,
         children: ['JS/JavaScript']
+    },
+    {
+        title: 'Gulp',
+        collapsable: false,
+        children: ['Gulp/Gulp']
+    },
+    {
+        title: 'UniApp',
+        collapsable: false,
+        children: ['UniApp/UniApp']
     }
 ]
 

@@ -5,7 +5,8 @@ heroText: 小米不是米的文档
 tagline: 文档, 博客
 actionText: 进入文档 →
 actionLink: /guide/
-footer: MIT Licensed | Copyright © 2019 小米不是米的文档
+# footer: MIT Licensed | Copyright © 2019 小米不是米的文档
+footer: 苏ICP备17046706号-2 | Copyright © 2019
 ---
 
 ## 关于~~文档~~笔记

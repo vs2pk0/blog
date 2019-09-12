@@ -2,6 +2,7 @@ const sidebar = require('./sidebar')
 
 module.exports = {
     repo: 'vs2pk0/blog',
+    docsBranch: 'master',
     navbar: true,
     editLinks: true,
     editLinkText: '编辑文档',
@@ -20,6 +21,16 @@ module.exports = {
                             link: '/JavaScript/'
                         },
                         { text: 'HTML5', link: '/HTML5/' }
+                    ]
+                },
+                {
+                    text: '框架工具',
+                    items: [
+                        {
+                            text: 'uniApp',
+                            link: '/uniApp/'
+                        },
+                        { text: 'gulp', link: '/gulp/' }
                     ]
                 }
             ]
