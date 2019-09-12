@@ -4,20 +4,22 @@ module.exports = {
     locales: localesConf,
     markdown: mdConf,
     themeConfig: themeConf,
-    // base: '/vuepress/',
-    base: '/',
+    base: '/vuepress/',
+    // base: '/',
+    dest: 'vuepress',
     serviceWorker: true,
-    // head: [
-    //     ['link', { rel: 'icon', href: '/favicon.ico' }],
-    //     ['link', { rel: 'manifest', href: './manifest.json' }]
-    // ],
+    head: [
+        ['link', { rel: 'icon', href: '/app.png' }],
+        ['link', { rel: 'apple-touch-icon', href: '/app.png' }],
+        ['link', { rel: 'manifest', href: '/manifest.json' }]
+    ],
     plugins: [
         require('./plugins/my-router'),
         require('./plugins/my-loader'),
         require('vuepress-plugin-viewer'),
-        /*'@vuepress/plugin-back-to-top',
-        [
-            '@vuepress/plugin-pwa',
+        // '@vuepress/plugin-back-to-top',
+        /*[
+            require('@vuepress/plugin-pwa'),
             {
                 serviceWorker: true,
                 updatePopup: {
