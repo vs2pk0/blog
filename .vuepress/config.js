@@ -4,15 +4,11 @@ module.exports = {
     locales: localesConf,
     markdown: mdConf,
     themeConfig: themeConf,
-    base: '/blog/',
-    // base: '/',
+    base: '/',
+    // base: '/blog/',
     dest: 'vuepress',
     serviceWorker: true,
-    head: [
-        ['link', { rel: 'icon', href: '/app.png' }],
-        ['link', { rel: 'apple-touch-icon', href: '/app.png' }],
-        ['link', { rel: 'manifest', href: '/manifest.json' }]
-    ],
+    head: [['link', { rel: 'icon', href: '/app.png' }], ['link', { rel: 'apple-touch-icon', href: '/app.png' }], ['link', { rel: 'manifest', href: '/manifest.json' }]],
     plugins: [
         require('./plugins/my-router'),
         require('./plugins/my-loader'),
@@ -35,7 +31,7 @@ module.exports = {
                 options: {
                     clientID: 'a6be3d6e792487f8db55',
                     clientSecret: '21d851acad8096547cc52ea2724b91e7238285b1',
-                    repo: 'blog',
+                    repo: 'vs2pk0.github.io',
                     owner: 'vs2pk0',
                     admin: ['vs2pk0'],
                     id: '<%- frontmatter.commentid || frontmatter.permalink %>', // Ensure uniqueness and length less than 50

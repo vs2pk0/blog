@@ -1,26 +1,67 @@
-const web = [
+// const web = [
+//     {
+//         title: 'HTML5',
+//         collapsable: false,
+//         children: ['HTML5/HTML5']
+//     },
+//     {
+//         title: 'JavaScript',
+//         collapsable: false,
+//         children: ['JS/JavaScript']
+//     },
+//     {
+//         title: 'Gulp',
+//         collapsable: false,
+//         children: ['Gulp/Gulp']
+//     },
+//     {
+//         title: 'UniApp',
+//         collapsable: false,
+//         children: ['UniApp/UniApp']
+//     }
+// ]
+
+const frame = [
     {
-        title: 'HTML5',
+        title: 'Vue',
         collapsable: false,
-        children: ['HTML5/HTML5']
+        children: ['Vue/VueCLI2.x', 'Vue/VueCLI3.x']
     },
     {
-        title: 'JavaScript',
+        title: 'Flutter',
         collapsable: false,
-        children: ['JS/JavaScript']
+        children: ['Flutter/环境搭建', 'Flutter/编辑器配置', 'Flutter/创建一个Flutter应用']
     },
     {
-        title: 'Gulp',
+        title: 'React',
         collapsable: false,
-        children: ['Gulp/Gulp']
-    },
+        children: ['React/搭建本地开发环境', 'React/修改配置项']
+    }
+]
+const tools = [
     {
-        title: 'UniApp',
+        title: '前端',
         collapsable: false,
-        children: ['UniApp/UniApp']
+        children: ['webExe', 'webPlugin']
+    }
+    // {
+    //     title: '常用工具',
+    //     collapsable: false,
+    //     children: ['webPlugin']
+    // }
+]
+
+const notes = [
+    {
+        title: 'js笔记',
+        collapsable: false,
+        children: ['js笔记']
     }
 ]
 
 module.exports = {
-    '/docs/前端/': web
+    // '/docs/前端/': web,
+    '/docs/常用框架/': frame,
+    '/docs/工具/': tools,
+    '/docs/笔记/': notes
 }

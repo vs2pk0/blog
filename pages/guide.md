@@ -55,11 +55,12 @@ export default {
       return this.posts
         .map(post => {
           const execs = re.exec(post.relativePath)
+          const date = post.lastUpdated?new Date(post.lastUpdated):new Date();
           return {
             ...post,
-            updateTimestamp: (new Date(post.lastUpdated)).getTime(),
+            updateTimestamp: date.getTime(),
             filename: execs ? execs['1'] : '',
-            formatDay: this.formatDate(new Date(post.lastUpdated))
+            formatDay: this.formatDate(date)
           }
         })
         .sort((a, b) => b.updateTimestamp - a.updateTimestamp)

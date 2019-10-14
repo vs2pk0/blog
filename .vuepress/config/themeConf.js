@@ -8,29 +8,49 @@ module.exports = {
     editLinkText: '编辑文档',
     lastUpdated: '更新于',
     sidebar,
+    serviceWorker: {
+        updatePopup: true, // Boolean | Object, 默认值是 undefined.
+        // 如果设置为 true, 默认的文本配置将是:
+        updatePopup: {
+            message: '发现页面有新内容',
+            buttonText: '刷新'
+        }
+    },
     nav: [
         { text: '最新', link: '/guide/' },
         {
-            text: '前端',
+            text: '笔记',
             items: [
                 {
-                    text: '基础',
-                    items: [
-                        {
-                            text: 'JavaScript',
-                            link: '/JavaScript/'
-                        },
-                        { text: 'HTML5', link: '/HTML5/' }
-                    ]
-                },
+                    text: 'js笔记',
+                    link: '/js笔记/'
+                }
+            ]
+        },
+        {
+            text: '常用框架',
+            link: '/VueCLI2.x/'
+            // items: [
+            //     {
+            //         text: 'Flutter入门',
+            //         link: '/环境搭建/'
+            //     }
+            // ]
+        },
+        {
+            text: '工具',
+            items: [
                 {
-                    text: '框架工具',
+                    text: '前端',
                     items: [
                         {
-                            text: 'uniApp',
-                            link: '/uniApp/'
+                            text: '常用软件',
+                            link: '/webExe/'
                         },
-                        { text: 'gulp', link: '/gulp/' }
+                        {
+                            text: '常用插件',
+                            link: '/webPlugin/'
+                        }
                     ]
                 }
             ]

@@ -1,8 +1,8 @@
 module.exports = {
     '/': {
         lang: 'zh-CN',
-        title: '小米不是米的文档',
-        description: '小米不是米的文档, vuepress 文档'
+        title: '淡泊以明志,宁静以致远',
+        description: '淡泊以明志,宁静以致远, vuepress 文档,前端,vur,react,flutter'
     }
     //   '/en/': {
     //     lang: 'en-US',

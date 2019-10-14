@@ -1,7 +1,7 @@
 ---
 home: true
 heroImage: /app.png
-heroText: 小米不是米的文档
+heroText: 淡泊以明志,宁静以致远
 tagline: 文档, 博客
 actionText: 进入文档 →
 actionLink: /guide/
