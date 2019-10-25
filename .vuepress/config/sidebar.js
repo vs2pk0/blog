@@ -25,7 +25,7 @@ const frame = [
     {
         title: 'Vue',
         collapsable: false,
-        children: ['Vue/VueCLI2.x', 'Vue/VueCLI3.x']
+        children: ['Vue/VueCLI2.x', 'Vue/VueCLI3.x', 'Vue/VueCLI4.x']
     },
     {
         title: 'Flutter',

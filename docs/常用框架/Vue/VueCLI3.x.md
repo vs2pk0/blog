@@ -74,3 +74,55 @@ module.exports = {
     }
 }
 ```
+
+## 对安卓低版本系统和 IE 上白屏问题解决
+-  根目录下新建 .babelrc 文件
+** 在项目根目录下新建 .babelrc 文件，跟 package.json 同级。 将以下代码复制到 .babelrc 文件中
+```js
+{
+  "presets": ["@babel/preset-env"],
+  "plugins": [
+    "@babel/plugin-transform-runtime"
+  ]
+}
+```
+- 修改 babel.config.js
+```js
+module.exports = {
+  presets: [
+    [
+      "@vue/app",
+      {
+        "useBuiltIns": "entry",
+        polyfills: [
+          'es6.promise',
+          'es6.symbol'
+        ]
+      }
+    ]
+  ]
+}
+```
+- 修改 vue.config.js
+
+```js
+module.exports = {
+  transpileDependencies: ['webpack-dev-server/client'],
+	chainWebpack: config => {
+    config.entry.app = ['babel-polyfill', './src/main.js'];
+	}
+}
+```
+- 修改 main.js 文件
+
+```js
+import '@babel/polyfill';
+import Es6Promise from 'es6-promise'
+Es6Promise.polyfill()
+```
+- 安装依赖
+
+
+```sh
+npm install --save-dev @babel/core @babel/plugin-transform-runtime @babel/preset-env es6-promise babel-polyfill
+```
