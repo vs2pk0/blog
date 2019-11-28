@@ -23,45 +23,54 @@
 
 const frame = [
     {
-        title: 'Vue',
+        title: "Vue",
         collapsable: false,
-        children: ['Vue/VueCLI2.x', 'Vue/VueCLI3.x', 'Vue/VueCLI4.x']
+        children: ["Vue/VueCLI2.x", "Vue/VueCLI3.x", "Vue/VueCLI4.x"]
     },
     {
-        title: 'Flutter',
+        title: "Flutter",
         collapsable: false,
-        children: ['Flutter/环境搭建', 'Flutter/编辑器配置', 'Flutter/创建一个Flutter应用']
+        children: [
+            "Flutter/环境搭建",
+            "Flutter/编辑器配置",
+            "Flutter/创建一个Flutter应用"
+        ]
     },
     {
-        title: 'React',
+        title: "React",
         collapsable: false,
-        children: ['React/搭建本地开发环境', 'React/修改配置项']
+        children: ["React/搭建本地开发环境", "React/修改配置项"]
     }
-]
+];
 const tools = [
     {
-        title: '前端',
+        title: "前端",
         collapsable: false,
-        children: ['webExe', 'webPlugin']
+        children: ["webExe", "webPlugin"]
     }
     // {
     //     title: '常用工具',
     //     collapsable: false,
     //     children: ['webPlugin']
     // }
-]
+];
 
 const notes = [
     {
-        title: 'js笔记',
+        title: "js笔记",
         collapsable: false,
-        children: ['js笔记']
+        children: ["常用方法"]
+    },
+    {
+        title: "项目搭建",
+        collapsable: false,
+        children: ["ant-design-vue"]
     }
-]
+];
 
 module.exports = {
     // '/docs/前端/': web,
-    '/docs/常用框架/': frame,
-    '/docs/工具/': tools,
-    '/docs/笔记/': notes
-}
+    "/docs/常用框架/": frame,
+    "/docs/工具/": tools,
+    "/docs/笔记/": notes
+};
