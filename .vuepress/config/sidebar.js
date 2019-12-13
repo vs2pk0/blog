@@ -59,7 +59,11 @@ const notes = [
     {
         title: "js笔记",
         collapsable: false,
-        children: ["常用方法"]
+        children: [
+            "常用方法",
+            "gulp运行报错解决方案",
+            "使用gulp把文件上传到服务器"
+        ]
     },
     {
         title: "项目搭建",

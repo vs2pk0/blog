@@ -27,6 +27,14 @@ module.exports = {
                         {
                             text: "常用方法",
                             link: "/常用方法/"
+                        },
+                        {
+                            text: "gulp运行报错解决方案",
+                            link: "/gulp运行报错解决方案/"
+                        },
+                        {
+                            text: "使用gulp把文件上传到服务器",
+                            link: "/使用gulp把文件上传到服务器/"
                         }
                     ]
                 },
