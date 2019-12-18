@@ -1,7 +1,7 @@
 ---
-title: 'VueCLI3.x'
-date: '2019-09-18'
-permalink: 'VueCLI3.x'
+title: "VueCLI3.x"
+date: "2019-09-18"
+permalink: "VueCLI3.x"
 ---
 
 ## 安装
@@ -58,26 +58,28 @@ npm i sass-resources-loader -D
 -   进入根项目的 vue.config.js 文件，增加如下配置
 
 ```js
-const path = require('path')
+const path = require("path");
 
 module.exports = {
     chainWebpack: config => {
-        const oneOfsMap = config.module.rule('scss').oneOfs.store
+        const oneOfsMap = config.module.rule("scss").oneOfs.store;
         oneOfsMap.forEach(item => {
-            item.use('sass-resources-loader')
-                .loader('sass-resources-loader')
+            item.use("sass-resources-loader")
+                .loader("sass-resources-loader")
                 .options({
-                    resources: [path.resolve(__dirname, 'xxx.scss')]
+                    resources: [path.resolve(__dirname, "xxx.scss")]
                 })
-                .end()
-        })
+                .end();
+        });
     }
-}
+};
 ```
 
 ## 对安卓低版本系统和 IE 上白屏问题解决
--  根目录下新建 .babelrc 文件
-** 在项目根目录下新建 .babelrc 文件，跟 package.json 同级。 将以下代码复制到 .babelrc 文件中
+
+-   根目录下新建 .babelrc 文件
+    \*\* 在项目根目录下新建 .babelrc 文件，跟 package.json 同级。 将以下代码复制到 .babelrc 文件中
+
 ```js
 {
   "presets": ["@babel/preset-env"],
@@ -86,43 +88,78 @@ module.exports = {
   ]
 }
 ```
-- 修改 babel.config.js
+
+-   修改 babel.config.js
+
 ```js
 module.exports = {
-  presets: [
-    [
-      "@vue/app",
-      {
-        "useBuiltIns": "entry",
-        polyfills: [
-          'es6.promise',
-          'es6.symbol'
+    presets: [
+        [
+            "@vue/app",
+            {
+                useBuiltIns: "entry",
+                polyfills: ["es6.promise", "es6.symbol"]
+            }
         ]
-      }
     ]
-  ]
-}
+};
 ```
-- 修改 vue.config.js
+
+-   修改 vue.config.js
 
 ```js
 module.exports = {
-  transpileDependencies: ['webpack-dev-server/client'],
-	chainWebpack: config => {
-    config.entry.app = ['babel-polyfill', './src/main.js'];
-	}
-}
+    transpileDependencies: ["webpack-dev-server/client"],
+    chainWebpack: config => {
+        config.entry.app = ["babel-polyfill", "./src/main.js"];
+    }
+};
 ```
-- 修改 main.js 文件
+
+-   修改 main.js 文件
 
 ```js
-import '@babel/polyfill';
-import Es6Promise from 'es6-promise'
-Es6Promise.polyfill()
+import "@babel/polyfill";
+import Es6Promise from "es6-promise";
+Es6Promise.polyfill();
 ```
-- 安装依赖
 
+-   安装依赖
 
 ```sh
 npm install --save-dev @babel/core @babel/plugin-transform-runtime @babel/preset-env es6-promise babel-polyfill
+```
+
+## 引入 postcss-px-to-viewport 插件
+
+```sh
+npm install postcss-loader postcss-px-to-viewport --save-dev
+```
+
+-   在 vue.config.js 里配置
+
+```js
+module.exports = {
+    css: {
+        loaderOptions: {
+            postcss: {
+                plugins: [
+                    require("postcss-px-to-viewport")({
+                        unitToConvert: "px",
+                        viewportWidth: 750,
+                        unitPrecision: 3,
+                        propList: ["*"],
+                        viewportUnit: "vw",
+                        fontViewportUnit: "vw",
+                        selectorBlackList: [],
+                        minPixelValue: 1,
+                        mediaQuery: false,
+                        replace: true,
+                        exclude: /(\/|\\)(node_modules)(\/|\\)/
+                    })
+                ]
+            }
+        }
+    }
+};
 ```

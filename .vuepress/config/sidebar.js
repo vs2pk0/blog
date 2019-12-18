@@ -62,7 +62,8 @@ const notes = [
         children: [
             "常用方法",
             "gulp运行报错解决方案",
-            "使用gulp把文件上传到服务器"
+            "使用gulp把文件上传到服务器",
+            "gulp自动编译为css的vw单位"
         ]
     },
     {

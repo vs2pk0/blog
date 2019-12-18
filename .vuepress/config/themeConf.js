@@ -35,6 +35,10 @@ module.exports = {
                         {
                             text: "使用gulp把文件上传到服务器",
                             link: "/使用gulp把文件上传到服务器/"
+                        },
+                        {
+                            text: "gulp自动编译为css的vw单位",
+                            link: "/gulp自动编译为css的vw单位/"
                         }
                     ]
                 },
