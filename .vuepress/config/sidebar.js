@@ -1,3 +1,10 @@
+/*
+ * @Descripttion: Descripttion
+ * @Author: LiLei
+ * @Date: 2020-02-19 09:42:00
+ * @LastEditors: LiLei
+ * @LastEditTime: 2020-02-19 10:53:13
+ */
 // const web = [
 //     {
 //         title: 'HTML5',
@@ -73,9 +80,19 @@ const notes = [
     }
 ];
 
+const plugIn = [
+    {
+        title: "插件",
+        collapsable: false,
+        children: [
+            "postcss/postcss",
+        ]
+    },
+]
 module.exports = {
     // '/docs/前端/': web,
     "/docs/常用框架/": frame,
+    "/docs/插件/": plugIn,
     "/docs/工具/": tools,
     "/docs/笔记/": notes
 };

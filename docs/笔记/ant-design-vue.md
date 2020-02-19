@@ -68,11 +68,11 @@ permalink: "ant-design-vue项目搭建"
     -   安装所需插件
 
     ```sh
-    npm install --save @babel/polyfill @babel/runtime
+    npm install --save @babel/polyfill
     ```
 
     ```sh
-    npm install -D @babel/plugin-transform-runtime @babel/preset-env
+    npm install --save-dev @babel/plugin-transform-runtime @babel/runtime
     ```
 
     -   修改 main.js
@@ -88,7 +88,7 @@ permalink: "ant-design-vue项目搭建"
     ```js
     module.exports = {
         presets: [
-            "@vue/cli-plugin-babel/preset",
+            "@vue/app",
             [
                 "@babel/preset-env",
                 {
@@ -99,16 +99,41 @@ permalink: "ant-design-vue项目搭建"
                     }
                 }
             ]
-        ],
-        plugins: [["@babel/plugin-transform-runtime"]]
+        ]
     };
     ```
+
+-   增加 css 样式兼容前缀
 
     -   修改.browserslistrc 文件
 
     ```sh
     > 1%
     last 2 versions
+    last 10 Chrome versions
+    last 5 Firefox versions
+    Safari >= 6
+    ie > 8
     ```
 
-    -   重新运行项目即可
+    -   安装 postcss 依赖
+
+    ```sh
+    cnpm install postcss-loader --save-dev
+    ```
+
+    -   安装 Autoprefixer(前缀补全)
+
+    ```sh
+    cnpm install Autoprefixer --save-dev
+    ```
+
+    -   postcss 配置，在项目根目录新建 postcss.config.js，配置如下
+
+    ```js
+    module.exports = {
+        plugins: [require("autoprefixer")({})]
+    };
+    ```
+
+    -   重新运行项目

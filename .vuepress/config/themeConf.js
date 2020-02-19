@@ -1,3 +1,10 @@
+/*
+ * @Descripttion: Descripttion
+ * @Author: LiLei
+ * @Date: 2020-02-19 09:42:00
+ * @LastEditors: LiLei
+ * @LastEditTime: 2020-02-19 10:16:33
+ */
 const sidebar = require("./sidebar");
 
 module.exports = {
@@ -54,6 +61,15 @@ module.exports = {
             ]
         },
         {
+            text: "插件",
+            link: "/postcss/"
+            // items: [
+            //     {
+            //         text: 'Flutter入门',
+            //         link: '/环境搭建/'
+            //     }
+            // ]
+        }, {
             text: "常用框架",
             link: "/VueCLI2.x/"
             // items: [
